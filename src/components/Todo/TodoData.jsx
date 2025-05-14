@@ -1,13 +1,18 @@
 const DataComponent = (props) => {
-    const { name, age, data } = props
+    const { TodoList } = props
     return (
         <div className="todo-data">
-            <div>My name is {name}</div>
-            <div>Age is {age}</div>
-            <div>Address is {data.address}</div>
-            <div>Country is {data.country}</div>
-            <div>Learning React</div>
-            <div>Watching Youtube</div>
+            {TodoList.map((item, index) => {
+                return (
+                    <div className="todo-item">
+                        <div> {item.name}</div>
+                        <button style={{ cursor: "pointer" }}>Delete</button>
+                    </div>
+                )
+            })}
+            <div>
+                {JSON.stringify(props.TodoList)}
+            </div>
         </div>
     )
 }
