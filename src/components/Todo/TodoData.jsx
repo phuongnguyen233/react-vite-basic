@@ -16,4 +16,4 @@ const DataComponent = (props) => {
         </div>
     )
 }
-export { DataComponent }
+export default DataComponent

@@ -26,4 +26,4 @@ const NewComponent = (props) => {
         </div>
     )
 }
-export { NewComponent }
+export default NewComponent
